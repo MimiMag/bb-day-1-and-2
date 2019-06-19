@@ -3,7 +3,7 @@ const cp = require('child_process')
 let numberOfCommits = cp.execSync('git rev-list --count master', { encoding: 'utf8' })
 numberOfCommits = parseInt(numberOfCommits)
 
-if( numberOfCommits > 10){
+if( numberOfCommits > 100){
   console.log(`Well done! You have ${numberOfCommits} commits!`)
   process.exit(0)
 }
