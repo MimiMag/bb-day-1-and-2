@@ -6,7 +6,7 @@
     "score": "",
     "learningGoals": [
       {
-        "goal": "Use semantic html to create a simple app",
+        "goal": "Use semantic html to create a simple html page given an example app",
         "score": 0,
         "laws": [
           {
@@ -46,14 +46,14 @@
         "score": 0,
         "laws": [
           {
-            "description": "`main` is used in the project",
-            "test": "echo 'I AM TEST THREE'",
+            "description": "repo exists",
+            "test": "ls",
             "status": "Broken",
             "shellOutput": ""
           },
           {
             "description": "`img` is used with the correct attributes",
-            "test": "echosdf 'I AM TEST FOUR'",
+            "test": "echo 'I AM TEST FOUR'",
             "status": "Broken",
             "shellOutput": ""
           }
