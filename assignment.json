@@ -23,7 +23,7 @@
           },
           {
             "description": "`main` is used in the project",
-            "test": "yarn jest checkForMain'",
+            "test": "yarn jest checkForMain",
             "status": "Broken",
             "shellOutput": ""
           },
