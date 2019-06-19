@@ -1,0 +1,64 @@
+{
+  "setup": "yarn init -y; yarn add jest;",
+  "assignment": {
+    "title": "Version Tracking, HTML & CSS",
+    "description": "Send us the link with the repository with your work for today to see whether you reached all learning goals! We'll be checking your detail-page for the following things:",
+    "score": "",
+    "learningGoals": [
+      {
+        "goal": "Use semantic html to create a simple app",
+        "score": 0,
+        "laws": [
+          {
+            "description": "Page contains `head` and `body` elements",
+            "test": "yarn jest imgHasCorrectAttributes",
+            "status": "Broken",
+            "shellOutput": ""
+          },
+          {
+            "description": "Page has a title",
+            "test": "yarn jest hasTitle",
+            "status": "Broken",
+            "shellOutput": ""
+          },
+          {
+            "description": "`main` is used in the project",
+            "test": "yarn jest checkForMain'",
+            "status": "Broken",
+            "shellOutput": ""
+          },
+          {
+            "description": "`img` is used with the correct attributes",
+            "test": "yarn jest imgHasCorrectAttributes",
+            "status": "Broken",
+            "shellOutput": ""
+          },
+          {
+            "description": "Page has an `input` and `textArea` field with appropriate labels",
+            "test": "yarn jest inputFields",
+            "status": "Broken",
+            "shellOutput": ""
+          }
+        ]
+      },
+      {
+        "goal": "Use GIT & GitHub for version tracking",
+        "score": 0,
+        "laws": [
+          {
+            "description": "`main` is used in the project",
+            "test": "echo 'I AM TEST THREE'",
+            "status": "Broken",
+            "shellOutput": ""
+          },
+          {
+            "description": "`img` is used with the correct attributes",
+            "test": "echosdf 'I AM TEST FOUR'",
+            "status": "Broken",
+            "shellOutput": ""
+          }
+        ]
+      }
+    ]
+  }
+}
