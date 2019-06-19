@@ -47,7 +47,7 @@
         "laws": [
           {
             "description": "repo exists",
-            "test": "ls",
+            "test": "echo 'Well Done!'",
             "status": "Broken",
             "shellOutput": "git rev-list --count master > 100"
           },
