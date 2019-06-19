@@ -1,9 +1,12 @@
 const cp = require('child_process')
 
-if(cp.execSync('git rev-list --count master') > 10){
-  console.log('Well done!')
+let numberOfCommits = cp.execSync('git rev-list --count master', { encoding: 'utf8' })
+numberOfCommits = parseInt(numberOfCommits)
+
+if( numberOfCommits > 10){
+  console.log(`Well done! You have ${numberOfCommits} commits!`)
   process.exit(0)
 }
 
-console.log('You have fewer than 2 commits!')
+console.log(`You have ${numberOfCommits} commits. That is fewer than the minimum 2 commits!`)
 process.exit(1)
