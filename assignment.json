@@ -49,11 +49,11 @@
             "description": "repo exists",
             "test": "ls",
             "status": "Broken",
-            "shellOutput": ""
+            "shellOutput": "git rev-list --count master > 100"
           },
           {
-            "description": "`img` is used with the correct attributes",
-            "test": "echo 'I AM TEST FOUR'",
+            "description": "master consists of multiple commits",
+            "test": "node ./check_logic/tests/checkForMultipleCommits.js",
             "status": "Broken",
             "shellOutput": ""
           }
