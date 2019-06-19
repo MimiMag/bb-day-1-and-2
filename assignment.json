@@ -11,7 +11,7 @@
         "laws": [
           {
             "description": "Page contains `head` and `body` elements",
-            "test": "yarn jest imgHasCorrectAttributes",
+            "test": "yarn jest hasHeadAndBody",
             "status": "Broken",
             "shellOutput": ""
           },
