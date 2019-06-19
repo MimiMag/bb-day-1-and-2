@@ -5,7 +5,7 @@ const html = fs.readFileSync(path.resolve('./pages/detail-page.html'), 'utf8');
 jest
   .dontMock('fs');
 
-describe('main', function () {
+describe('img', function () {
 
   beforeEach(() => {
     document.documentElement.innerHTML = html.toString();
