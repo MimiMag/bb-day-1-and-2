@@ -1,5 +1,10 @@
 const stylelint = require('stylelint')
 
+const formatSourceName = (path) => {
+  const parts = path.split('/')
+  return parts[parts.length - 1]
+}
+
 stylelint.lint({
   config: {
     rules: {
@@ -12,8 +17,10 @@ stylelint.lint({
     if (data.errored === true) {
       const output = JSON.parse(data.output)
       output.map(res => {
-        console.log(`Error at ${res.source}`)
-        res.warnings.map(warning => console.log(`${warning.text}`))
+        if(res.warnings.length > 0) {
+          console.log(`Error at ${formatSourceName(res.source)}`)
+          res.warnings.map(warning => console.log(`${warning.text}`))
+        }
       })
       process.exitCode = 1
     }
