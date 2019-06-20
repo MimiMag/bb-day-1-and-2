@@ -1,5 +1,5 @@
 {
-  "setup": "yarn init -y; yarn add jest html5-validator stylelint stylelint-config-standard; touch .stylelintIgnore; echo 'check_logic\npackage.json\nyarn-error.log' >> .stylelintIgnore",
+  "setup": "yarn init -y; yarn add jest html5-validator stylelint stylelint-config-standard; touch .stylelintIgnore; git adecho 'check_logic\npackage.json\nyarn-error.log' >> .stylelintIgnore",
   "assignment": {
     "title": "Version Tracking, HTML & CSS",
     "description": "Send us the link with the repository with your work for today to see whether you reached all learning goals! We'll be checking your detail-page for the following things:",
