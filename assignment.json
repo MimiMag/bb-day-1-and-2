@@ -82,13 +82,13 @@
             "shellOutput": ""
           },
           {
-            "description": "CSS file uses the class selector to style HTML elements with the class `artObject`",
+            "description": "CSS file uses the class selector to style HTML elements with the class `comment`, `formSection` or `button`",
             "test": "yarn jest cssUsesClassSelector",
             "status": "Broken",
             "shellOutput": ""
           },
           {
-            "description": "CSS file uses the id selector to style HTML elements with the id `gallery`",
+            "description": "CSS file uses the id selector to style HTML elements with the id `content` or `comments`",
             "test": "yarn jest cssUsesIdSelector",
             "status": "Broken",
             "shellOutput": ""

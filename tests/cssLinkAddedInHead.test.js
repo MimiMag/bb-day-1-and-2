@@ -14,11 +14,15 @@ describe('CSS of detail-page linked in `head` section of `detail-page.html`', fu
     jest.resetModules();
   });
 
-  it('exists', function () {
+  it('link element exists', function () {
     const linkToCSS = document.querySelectorAll('link[rel="stylesheet"]')[0]
-    const headSection = document.querySelector('body')
-    const cssLinkIsInHead = linkToCSS.parentElement === headSection
     expect(linkToCSS).toBeTruthy();
-    expect(cssLinkIsInHead).toBe(true);
   });
+
+  it('link is inside the head function', () => {
+    const linkToCSS = document.querySelectorAll('link[rel="stylesheet"]')[0]
+    const headSection = document.querySelector('head')
+    const cssLinkIsInHead = linkToCSS.parentElement === headSection
+    expect(cssLinkIsInHead).toBe(true);
+  })
 });
