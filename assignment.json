@@ -1,5 +1,5 @@
 {
-  "setup": "yarn init -y; yarn add jest;",
+  "setup": "yarn init -y; yarn add jest html5-validator stylelint stylelint-config-recommended; touch stylelint.config.js; touch .stylelintIgnore; echo 'module.exports={ extends: `stylelint-config-recommended`, rules: { indentation: [2] } }' >> stylelint.config.js; echo 'check_logic\npackage.json\nyarn-error.log' >> .stylelintIgnore",
   "assignment": {
     "title": "Version Tracking, HTML & CSS",
     "description": "Send us the link with the repository with your work for today to see whether you reached all learning goals! We'll be checking your detail-page for the following things:",
@@ -24,12 +24,6 @@
           {
             "description": "`main` is used in the project",
             "test": "yarn jest checkForMain",
-            "status": "Broken",
-            "shellOutput": ""
-          },
-          {
-            "description": "`img` is used with the correct attributes",
-            "test": "yarn jest imgHasCorrectAttributes",
             "status": "Broken",
             "shellOutput": ""
           },
@@ -67,7 +61,7 @@
             "description": "CSS is written in a external file",
             "test": "yarn jest cssInExternalFile",
             "status": "Broken",
-            "shellOutput": "git rev-list --count master > 100"
+            "shellOutput": ""
           },
           {
             "description": "CSS is added in a link in the `head` section of the HTML page",
@@ -109,13 +103,31 @@
             "description": "`margin` & `padding` have been adjusted",
             "test": "yarn jest cssMarginAndPaddingAdjusted.test.js",
             "status": "Broken",
-            "shellOutput": "git rev-list --count master > 100"
+            "shellOutput": ""
           },
           {
             "description": "CSS file contains `flex-box` styling",
             "test": "yarn jest cssUsesFlexBox",
             "status": "Broken",
             "shellOutput": ""
+          }
+        ]
+      },
+      {
+        "goal": "Implement basic principles of clean coding in your app",
+        "score": 0,
+        "laws": [
+          {
+            "description": "Code is properly indented",
+            "test": "yarn stylelint .",
+            "status": "Broken",
+            "shellOutput": "git rev-list --count master > 100"
+          },
+          {
+            "description": "HTML passes all validation rules",
+            "test": "yarn html5v index.html; yarn html5v pages/details.html;",
+            "status": "Broken",
+            "shellOutput": "git rev-list --count master > 100"
           }
         ]
       }
