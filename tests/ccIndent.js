@@ -12,13 +12,13 @@ stylelint.lint({
     if (data.errored === true) {
       const output = JSON.parse(data.output)
       output.map(res => {
-        console.log(`Error at ${res.source}`)
-        res.warnings.map(warning => console.log(warning.text))
+        process.stdout.write(`Error at ${res.source}\n`)
+        res.warnings.map(warning => process.stdout.write(`${warning.text}\n`))
       })
       process.exit(1)
     }
 
-    console.log('Well done!')
+    process.stdout.write('Well done!')
     process.exit(0)
   })
   .catch(function (err) {

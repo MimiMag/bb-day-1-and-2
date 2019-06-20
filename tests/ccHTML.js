@@ -8,13 +8,13 @@ Promise.all([index, detailPage])
     result.map(res => {
       const errors = res.messages.filter(message => message.type === 'error')
       if (errors.length === 0) {
-        console.log('Well done!')
+        process.stdout.write('Well done!')
         process.exit(0)
       }
 
-      errors.map(error => console.log(`Error! ${error.message}`))
+      errors.map(error => process.stdout.write(`Error! ${error.message}`))
       process.exit(1)
 
     })
   })
-  .catch(err => console.log(err))
+  .catch(err => process.stdout.write(err))
