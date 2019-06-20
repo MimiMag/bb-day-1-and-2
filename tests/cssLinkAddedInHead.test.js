@@ -19,10 +19,13 @@ describe('CSS of detail-page linked in `head` section of `detail-page.html`', fu
     expect(linkToCSS).toBeTruthy();
   });
 
-  it('link is inside the head function', () => {
-    const linkToCSS = document.querySelectorAll('link[rel="stylesheet"]')[0]
-    const headSection = document.querySelector('head')
-    const cssLinkIsInHead = linkToCSS.parentElement === headSection
-    expect(cssLinkIsInHead).toBe(true);
+  it('link is inside the `head` section', () => {
+    const cssCode = fs.readFileSync('./pages/detail-page.css', 'utf8')
+    const startHead = cssCode.indexOf('<head>')
+    const endHead = cssCode.indexOf('</head>')
+    const startLink = cssCode.indexOf('stylesheet')
+    const linkInHead = startLink < endHead && startLink > startHead
+
+    expect(linkInHead).toBe(true)
   })
 });
