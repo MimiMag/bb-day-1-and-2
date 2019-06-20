@@ -9,7 +9,6 @@ stylelint.lint({
   files: ".",
 })
   .then(function (data) {
-  .then(function (data) {
     if (data.errored === true) {
       const output = JSON.parse(data.output)
       output.map(res => {
@@ -21,11 +20,6 @@ stylelint.lint({
 
     console.log('Well done!')
     process.exit(0)
-  })
-
-    console.log('Well done!')
-    process.exit(0)
-    
   })
   .catch(function (err) {
     console.error(err.stack);
