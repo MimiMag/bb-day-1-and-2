@@ -6,7 +6,7 @@
     "score": "",
     "learningGoals": [
       {
-        "goal": "Use semantic html to create a simple html page given an example app",
+        "goal": "Use semantic html to create a simple html page given an example",
         "score": 0,
         "laws": [
           {
@@ -54,6 +54,66 @@
           {
             "description": "master consists of multiple commits",
             "test": "node ./check_logic/tests/checkForMultipleCommits.js",
+            "status": "Broken",
+            "shellOutput": ""
+          }
+        ]
+      },
+      {
+        "goal": "Use CSS to style specific elements, given an example",
+        "score": 0,
+        "laws": [
+          {
+            "description": "CSS is written in a external file",
+            "test": "yarn jest cssInExternalFile",
+            "status": "Broken",
+            "shellOutput": "git rev-list --count master > 100"
+          },
+          {
+            "description": "CSS is added in a link in the `head` section of the HTML page",
+            "test": "yarn jest cssLinkAddedInHead",
+            "status": "Broken",
+            "shellOutput": ""
+          },
+          {
+            "description": "No internal styling",
+            "test": "yarn jest cssNoInternalStyling",
+            "status": "Broken",
+            "shellOutput": ""
+          },
+          {
+            "description": "CSS file uses the class selector to style HTML elements with the class `artObject`",
+            "test": "yarn jest cssUsesClassSelector",
+            "status": "Broken",
+            "shellOutput": ""
+          },
+          {
+            "description": "CSS file uses the id selector to style HTML elements with the id `gallery`",
+            "test": "yarn jest cssUsesIdSelector",
+            "status": "Broken",
+            "shellOutput": ""
+          },
+          {
+            "description": "`font-family` & `background` have been adjusted",
+            "test": "yarn jest cssFontFamilyAndBackgroundHaveBeenAdjusted",
+            "status": "Broken",
+            "shellOutput": ""
+          }
+        ]
+      },
+      {
+        "goal": "Use CSS to position HTML elements (responsively), given an example.",
+        "score": 0,
+        "laws": [
+          {
+            "description": "`margin` & `padding` have been adjusted",
+            "test": "yarn jest cssMarginAndPaddingAdjusted.test.js",
+            "status": "Broken",
+            "shellOutput": "git rev-list --count master > 100"
+          },
+          {
+            "description": "CSS file contains `flex-box` styling",
+            "test": "yarn jest cssUsesFlexBox",
             "status": "Broken",
             "shellOutput": ""
           }
