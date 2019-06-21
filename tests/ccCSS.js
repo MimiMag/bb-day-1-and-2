@@ -28,6 +28,7 @@ stylelint.lint({
   files: ["./pages/detail-page.css", "./index.css"],
 })
   .then(function (data) {
+    console.log('\n\n\nDATA & ERRORED?', data, data.errored)
     if (data.errored) {
       const output = JSON.parse(data.output)
       output.map(res => {
