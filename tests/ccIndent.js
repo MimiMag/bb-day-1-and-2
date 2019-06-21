@@ -14,7 +14,7 @@ stylelint.lint({
   files: ".",
 })
   .then(function (data) {
-    if (data.errored === true) {
+    if (data.errored) {
       const output = JSON.parse(data.output)
       output.map(res => {
         if(res.warnings.length > 0) {
@@ -22,12 +22,13 @@ stylelint.lint({
           res.warnings.map(warning => console.log(`${warning.text}`))
         }
       })
-      process.exitCode = 1
+    } else {
+      console.log('Well done!')
     }
 
-    process.stdout.write('Well done!')
-    process.exitCode = 0
+    return data.errored
   })
+  .then(err => err? process.exit(1) : process.exit(0))
   .catch(function (err) {
     console.error(err.stack);
   });
