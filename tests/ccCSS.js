@@ -7,7 +7,22 @@ const formatSourceName = (path) => {
 
 stylelint.lint({
   config: {
-    extends: 'stylelint-config-standard'
+    rules: {
+      "at-rule-no-unknown": true,
+      "at-rule-semicolon-newline-after": "always",
+      "block-no-empty": true,
+      "block-opening-brace-newline-after": "always",
+      "color-no-invalid-hex": true,
+      "comment-no-empty": true,
+      "declaration-block-no-duplicate-properties": true,
+      "declaration-block-no-shorthand-property-overrides": true,
+      "font-family-no-duplicate-names": true,
+      "font-family-no-missing-generic-family-keyword": true,
+      "no-duplicate-selectors": true,
+      "no-empty-source": true,
+      "no-extra-semicolons": true,
+      "color-no-invalid-hex": true,
+    }
   },
   files: ".",
 })
@@ -15,7 +30,7 @@ stylelint.lint({
     console.log('\n\n\nDATA & ERRORED?', data, data.errored)
     if (data.errored) {
       const output = JSON.parse(data.output)
-      
+
       output.map(res => {
         if (res.warnings.length > 0) {
           console.log(`Error at ${formatSourceName(res.source)}`)
