@@ -7,14 +7,13 @@ const formatSourceName = (path) => {
 
 stylelint.lint({
   config: {
-    "rules": {
+    rules: {
       "at-rule-no-unknown": true,
       "at-rule-semicolon-newline-after": "always",
       "block-no-empty": true,
       "block-opening-brace-newline-after": "always",
       "color-no-invalid-hex": true,
       "comment-no-empty": true,
-      "comment-whitespace-inside": "always" | "never",
       "declaration-block-no-duplicate-properties": true,
       "declaration-block-no-shorthand-property-overrides": true,
       "font-family-no-duplicate-names": true,
@@ -25,7 +24,7 @@ stylelint.lint({
       "color-no-invalid-hex": true,
     }
   },
-  files: ["./pages/detail-page.css", "./index.css"],
+  files: ".",
 })
   .then(function (data) {
     console.log('\n\n\nDATA & ERRORED?', data, data.errored)
