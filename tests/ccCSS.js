@@ -15,6 +15,7 @@ stylelint.lint({
     console.log('\n\n\nDATA & ERRORED?', data, data.errored)
     if (data.errored) {
       const output = JSON.parse(data.output)
+      
       output.map(res => {
         if (res.warnings.length > 0) {
           console.log(`Error at ${formatSourceName(res.source)}`)
