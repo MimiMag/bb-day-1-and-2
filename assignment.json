@@ -1,8 +1,5 @@
 {
-  "setup": "yarn init -y; yarn add jest html5-validator stylelint; touch .stylelintIgnore; echo 'check_logic\npackage.json\nyarn-error.log' >> .stylelintIgnore;",
-  "assignment": {
-    "title": "Version Tracking, HTML & CSS",
-    "description": "Send us the link with the repository with your work for today to see whether you reached all learning goals! We'll be checking your detail-page for the following things:",
+  "setup": "chmod +x ./check_logic/setup.sh; ./check_logic/setup.sh",
     "score": "",
     "learningGoals": [
       {
@@ -125,7 +122,7 @@
           },
           {
             "description": "CSS passes all validation rules",
-            "test": "node check_logic/tests/ccCSS.js",
+            "test": "yarn stylelint .",
             "status": "Broken",
             "shellOutput": ""
           }
