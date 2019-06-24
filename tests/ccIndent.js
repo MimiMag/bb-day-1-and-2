@@ -18,17 +18,17 @@ stylelint.lint({
       const output = JSON.parse(data.output)
       output.map(res => {
         if(res.warnings.length > 0) {
-          process.stdout.write(`Error at ${formatSourceName(res.source)}\n`)
-          res.warnings.map(warning => process.stdout.write(`${warning.text}\n`))
+          console.log(`Error at ${formatSourceName(res.source)}`)
+          res.warnings.map(warning => console.log(`${warning.text}`))
         }
       })
     } else {
-      process.stdout.write('Well done!\n')
+      console.log('Well done!')
     }
 
     return data.errored
   })
-  .then(err => err? process.exit(1) : process.exit(0))
+  .then(err => err? process.exitCode = 1 : process.exitCode = 0 )
   .catch(function (err) {
     console.error(err.stack);
   });
