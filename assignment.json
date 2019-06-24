@@ -118,14 +118,8 @@
         "score": 0,
         "laws": [
           {
-            "description": "Code is properly indented",
-            "test": "node check_logic/tests/ccIndent.js",
-            "status": "Broken",
-            "shellOutput": ""
-          },
-          {
             "description": "HTML passes all validation rules",
-            "test": "node check_logic/tests/ccHTML.js",
+            "test": "yarn html5v index.html; yarn html5v pages/detail-page.html",
             "status": "Broken",
             "shellOutput": ""
           },
