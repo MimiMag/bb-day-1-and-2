@@ -18,12 +18,12 @@ stylelint.lint({
       const output = JSON.parse(data.output)
       output.map(res => {
         if(res.warnings.length > 0) {
-          console.log(`Error at ${formatSourceName(res.source)}`)
-          res.warnings.map(warning => console.log(`${warning.text}`))
+          process.stdout.write(`Error at ${formatSourceName(res.source)}\n`)
+          res.warnings.map(warning => process.stdout.write(`${warning.text}\n`))
         }
       })
     } else {
-      console.log('Well done!')
+      process.stdout.write('Well done!\n')
     }
 
     return data.errored
