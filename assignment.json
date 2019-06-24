@@ -1,133 +1,132 @@
 {
   "setup": "chmod +x ./check_logic/setup.sh; ./check_logic/setup.sh",
-    "score": "",
-    "learningGoals": [
-      {
-        "goal": "Use semantic html to create a simple html page given an example",
-        "score": 0,
-        "laws": [
-          {
-            "description": "Page contains `head` and `body` elements",
-            "test": "yarn jest hasHeadAndBody",
-            "status": "Broken",
-            "shellOutput": ""
-          },
-          {
-            "description": "Page has a title",
-            "test": "yarn jest hasTitle",
-            "status": "Broken",
-            "shellOutput": ""
-          },
-          {
-            "description": "`main` is used in the project",
-            "test": "yarn jest checkForMain",
-            "status": "Broken",
-            "shellOutput": ""
-          },
-          {
-            "description": "Page has an `input` and `textArea` field with appropriate labels",
-            "test": "yarn jest inputFields",
-            "status": "Broken",
-            "shellOutput": ""
-          }
-        ]
-      },
-      {
-        "goal": "Use GIT & GitHub for version tracking",
-        "score": 0,
-        "laws": [
-          {
-            "description": "repo exists",
-            "test": "echo 'Well Done!'",
-            "status": "Broken",
-            "shellOutput": "git rev-list --count master > 100"
-          },
-          {
-            "description": "master consists of multiple commits",
-            "test": "node ./check_logic/tests/checkForMultipleCommits.js",
-            "status": "Broken",
-            "shellOutput": ""
-          }
-        ]
-      },
-      {
-        "goal": "Use CSS to style specific elements, given an example",
-        "score": 0,
-        "laws": [
-          {
-            "description": "CSS is written in a external file",
-            "test": "yarn jest cssInExternalFile",
-            "status": "Broken",
-            "shellOutput": ""
-          },
-          {
-            "description": "CSS is added in a link in the `head` section of the HTML page",
-            "test": "yarn jest cssLinkAddedInHead",
-            "status": "Broken",
-            "shellOutput": ""
-          },
-          {
-            "description": "No internal styling",
-            "test": "yarn jest cssNoInternalStyling",
-            "status": "Broken",
-            "shellOutput": ""
-          },
-          {
-            "description": "CSS file uses the class selector to style HTML elements with the class `comment`, `formSection` or `button`",
-            "test": "yarn jest cssUsesClassSelector",
-            "status": "Broken",
-            "shellOutput": ""
-          },
-          {
-            "description": "CSS file uses the id selector to style HTML elements with the id `content` or `comments`",
-            "test": "yarn jest cssUsesIdSelector",
-            "status": "Broken",
-            "shellOutput": ""
-          },
-          {
-            "description": "`font-family` & `background` have been adjusted",
-            "test": "yarn jest cssFontFamilyAndBackgroundHaveBeenAdjusted",
-            "status": "Broken",
-            "shellOutput": ""
-          }
-        ]
-      },
-      {
-        "goal": "Use CSS to position HTML elements (responsively), given an example.",
-        "score": 0,
-        "laws": [
-          {
-            "description": "`margin` & `padding` have been adjusted",
-            "test": "yarn jest cssMarginAndPaddingAdjusted.test.js",
-            "status": "Broken",
-            "shellOutput": ""
-          },
-          {
-            "description": "CSS file contains `flex-box` styling",
-            "test": "yarn jest cssUsesFlexBox",
-            "status": "Broken",
-            "shellOutput": ""
-          }
-        ]
-      },
-      {
-        "goal": "Implement basic principles of clean coding in your app",
-        "score": 0,
-        "laws": [
-          {
-            "description": "HTML passes all validation rules",
-            "test": "yarn html5v index.html; yarn html5v pages/detail-page.html",
-            "status": "Broken",
-            "shellOutput": ""
-          },
-          {
-            "description": "CSS passes all validation rules",
-            "test": "yarn stylelint .",
-            "status": "Broken",
-            "shellOutput": ""
-          }
-        ]
-      }
-    ]
-  }
+  "score": "",
+  "learningGoals": [
+    {
+      "goal": "Use semantic html to create a simple html page given an example",
+      "score": 0,
+      "laws": [
+        {
+          "description": "Page contains `head` and `body` elements",
+          "test": "yarn jest hasHeadAndBody",
+          "status": "Broken",
+          "shellOutput": ""
+        },
+        {
+          "description": "Page has a title",
+          "test": "yarn jest hasTitle",
+          "status": "Broken",
+          "shellOutput": ""
+        },
+        {
+          "description": "`main` is used in the project",
+          "test": "yarn jest checkForMain",
+          "status": "Broken",
+          "shellOutput": ""
+        },
+        {
+          "description": "Page has an `input` and `textArea` field with appropriate labels",
+          "test": "yarn jest inputFields",
+          "status": "Broken",
+          "shellOutput": ""
+        }
+      ]
+    },
+    {
+      "goal": "Use GIT & GitHub for version tracking",
+      "score": 0,
+      "laws": [
+        {
+          "description": "repo exists",
+          "test": "echo 'Well Done!'",
+          "status": "Broken",
+          "shellOutput": "git rev-list --count master > 100"
+        },
+        {
+          "description": "master consists of multiple commits",
+          "test": "node ./check_logic/tests/checkForMultipleCommits.js",
+          "status": "Broken",
+          "shellOutput": ""
+        }
+      ]
+    },
+    {
+      "goal": "Use CSS to style specific elements, given an example",
+      "score": 0,
+      "laws": [
+        {
+          "description": "CSS is written in a external file",
+          "test": "yarn jest cssInExternalFile",
+          "status": "Broken",
+          "shellOutput": ""
+        },
+        {
+          "description": "CSS is added in a link in the `head` section of the HTML page",
+          "test": "yarn jest cssLinkAddedInHead",
+          "status": "Broken",
+          "shellOutput": ""
+        },
+        {
+          "description": "No internal styling",
+          "test": "yarn jest cssNoInternalStyling",
+          "status": "Broken",
+          "shellOutput": ""
+        },
+        {
+          "description": "CSS file uses the class selector to style HTML elements with the class `comment`, `formSection` or `button`",
+          "test": "yarn jest cssUsesClassSelector",
+          "status": "Broken",
+          "shellOutput": ""
+        },
+        {
+          "description": "CSS file uses the id selector to style HTML elements with the id `content` or `comments`",
+          "test": "yarn jest cssUsesIdSelector",
+          "status": "Broken",
+          "shellOutput": ""
+        },
+        {
+          "description": "`font-family` & `background` have been adjusted",
+          "test": "yarn jest cssFontFamilyAndBackgroundHaveBeenAdjusted",
+          "status": "Broken",
+          "shellOutput": ""
+        }
+      ]
+    },
+    {
+      "goal": "Use CSS to position HTML elements (responsively), given an example.",
+      "score": 0,
+      "laws": [
+        {
+          "description": "`margin` & `padding` have been adjusted",
+          "test": "yarn jest cssMarginAndPaddingAdjusted.test.js",
+          "status": "Broken",
+          "shellOutput": ""
+        },
+        {
+          "description": "CSS file contains `flex-box` styling",
+          "test": "yarn jest cssUsesFlexBox",
+          "status": "Broken",
+          "shellOutput": ""
+        }
+      ]
+    },
+    {
+      "goal": "Implement basic principles of clean coding in your app",
+      "score": 0,
+      "laws": [
+        {
+          "description": "HTML passes all validation rules",
+          "test": "yarn html5v index.html; yarn html5v pages/detail-page.html",
+          "status": "Broken",
+          "shellOutput": ""
+        },
+        {
+          "description": "CSS passes all validation rules",
+          "test": "yarn stylelint .",
+          "status": "Broken",
+          "shellOutput": ""
+        }
+      ]
+    }
+  ]
 }
