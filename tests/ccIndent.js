@@ -32,3 +32,5 @@ stylelint.lint({
   .catch(function (err) {
     console.error(err.stack);
   });
+
+  console.log('Well done')
