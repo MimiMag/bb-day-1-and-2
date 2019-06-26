@@ -125,7 +125,7 @@
           },
           {
             "description": "CSS passes all validation rules",
-            "test": "echo $(yarn stylelint .); yarn stylelint .",
+            "test": "yarn stylelint .",
             "status": "Broken",
             "shellOutput": ""
           }

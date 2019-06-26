@@ -13,8 +13,8 @@ Promise.all([index, detailPage])
       } else {
         errors.map(error => console.log(`Error! ${error.message}`))
       }
-      return errors.length === 0
+      errors.length === 0 ? process.exitCode = 0 : process.exitCode = 1
+
     })
   })
-  .then(passed => passed? process.exit(0) : process.exit(1))
   .catch(err => console.log(err))
