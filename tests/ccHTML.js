@@ -11,7 +11,7 @@ Promise.all([index, detailPage])
         console.log('Well done!')
         process.exitCode = 0
       } else {
-        errors.map(error => console.log(`Error! ${error.message}`))
+        errors.forEach(error => console.log(`Error! ${error.message}`))
       }
       errors.length === 0 ? process.exitCode = 0 : process.exitCode = 1
 

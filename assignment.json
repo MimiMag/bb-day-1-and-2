@@ -96,24 +96,6 @@
         ]
       },
       {
-        "goal": "Use CSS to position HTML elements (responsively), given an example.",
-        "score": 0,
-        "laws": [
-          {
-            "description": "`margin` & `padding` have been adjusted",
-            "test": "yarn jest cssMarginAndPaddingAdjusted.test.js",
-            "status": "Broken",
-            "shellOutput": ""
-          },
-          {
-            "description": "CSS file contains `flex-box` styling",
-            "test": "yarn jest cssUsesFlexBox",
-            "status": "Broken",
-            "shellOutput": ""
-          }
-        ]
-      },
-      {
         "goal": "Implement basic principles of clean coding in your app",
         "score": 0,
         "laws": [
@@ -126,6 +108,24 @@
           {
             "description": "CSS passes all validation rules",
             "test": "yarn stylelint .",
+            "status": "Broken",
+            "shellOutput": ""
+          }
+        ]
+      },
+      {
+        "goal": "Use CSS to position HTML elements (responsively), given an example.",
+        "score": 0,
+        "laws": [
+          {
+            "description": "`margin` & `padding` have been adjusted",
+            "test": "yarn jest cssMarginAndPaddingAdjusted.test.js",
+            "status": "Broken",
+            "shellOutput": ""
+          },
+          {
+            "description": "CSS file contains `flex-box` styling",
+            "test": "yarn jest cssUsesFlexBox",
             "status": "Broken",
             "shellOutput": ""
           }
